@@ -1,0 +1,87 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat',
+  sans-serif !important;
+}
+
+.feature-details h4,
+.feature-details p {
+  transition: all 0.4s;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+  width: 3rem;
+  height: 3rem;
+  top: 65%;
+}
+
+.slick-prev {
+  left: 45%;
+}
+.slick-prev::before {
+  content: url("../images/carousel-arrow-left.svg");
+}
+.slick-next {
+  right: 45%;
+}
+.slick-next::before {
+  content: url("../images/carousel-arrow-right.svg");
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (min-width:1401px) {
+  .slick-prev,
+  .slick-next {
+    top: 75%;
+  }
+  .slick-next {
+    right: 47%;
+  }
+  .slick-prev {
+    left: 47%;
+  }
+}
+@media (min-width:1024px) {
+  .dropdown-third {
+    display: none;
+  }
+
+  .dropdown-li:hover .dropdown-third {
+    display: block;
+  }
+}
+@media (max-width:1400px) {
+  .slick-prev,
+  .slick-next {
+    top: 75%;
+  }
+}
+
+@media (max-width:991px) {
+
+  .slick-next {
+    right: 40%;
+  }
+  .slick-prev {
+    left: 40%;
+  }
+}
